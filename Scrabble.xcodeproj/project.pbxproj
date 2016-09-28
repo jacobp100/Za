@@ -14,6 +14,9 @@
 		4EB1266A1D9BBB8100016F8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB126681D9BBB8100016F8C /* LaunchScreen.storyboard */; };
 		4EB126751D9BBB8100016F8C /* ScrabbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB126741D9BBB8100016F8C /* ScrabbleTests.swift */; };
 		4EB126801D9BBB8100016F8C /* ScrabbleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB1267F1D9BBB8100016F8C /* ScrabbleUITests.swift */; };
+		4EB1268E1D9BD2F100016F8C /* DictionaryLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB1268D1D9BD2F100016F8C /* DictionaryLookup.swift */; };
+		4EB126911D9BD40000016F8C /* sowpods.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4EB1268F1D9BD40000016F8C /* sowpods.txt */; };
+		4EB126921D9BD40000016F8C /* twl06.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4EB126901D9BD40000016F8C /* twl06.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		4EB1267B1D9BBB8100016F8C /* ScrabbleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrabbleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB1267F1D9BBB8100016F8C /* ScrabbleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrabbleUITests.swift; sourceTree = "<group>"; };
 		4EB126811D9BBB8100016F8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EB1268D1D9BD2F100016F8C /* DictionaryLookup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryLookup.swift; sourceTree = "<group>"; };
+		4EB1268F1D9BD40000016F8C /* sowpods.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sowpods.txt; sourceTree = "<group>"; };
+		4EB126901D9BD40000016F8C /* twl06.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = twl06.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +105,13 @@
 			children = (
 				4EB1265F1D9BBB8100016F8C /* AppDelegate.swift */,
 				4EB126611D9BBB8100016F8C /* ViewController.swift */,
+				4EB1268D1D9BD2F100016F8C /* DictionaryLookup.swift */,
 				4EB126631D9BBB8100016F8C /* Main.storyboard */,
 				4EB126661D9BBB8100016F8C /* Assets.xcassets */,
 				4EB126681D9BBB8100016F8C /* LaunchScreen.storyboard */,
 				4EB1266B1D9BBB8100016F8C /* Info.plist */,
+				4EB1268F1D9BD40000016F8C /* sowpods.txt */,
+				4EB126901D9BD40000016F8C /* twl06.txt */,
 			);
 			path = Scrabble;
 			sourceTree = "<group>";
@@ -229,6 +238,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EB126921D9BD40000016F8C /* twl06.txt in Resources */,
+				4EB126911D9BD40000016F8C /* sowpods.txt in Resources */,
 				4EB1266A1D9BBB8100016F8C /* LaunchScreen.storyboard in Resources */,
 				4EB126671D9BBB8100016F8C /* Assets.xcassets in Resources */,
 				4EB126651D9BBB8100016F8C /* Main.storyboard in Resources */,
@@ -256,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EB1268E1D9BD2F100016F8C /* DictionaryLookup.swift in Sources */,
 				4EB126621D9BBB8100016F8C /* ViewController.swift in Sources */,
 				4EB126601D9BBB8100016F8C /* AppDelegate.swift in Sources */,
 			);
