@@ -29,7 +29,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         wordTitle.text = word ?? "No Word"
 
         resultLabelsForDictionaries.keys.forEach {
-            if let word = word, let dictionary = dictionaries[$0] {
+            if word?.containsEmoji == true {
+                resultLabelsForDictionaries[$0]?.text = "🎉"
+            } else if let word = word, let dictionary = dictionaries[$0] {
                 resultLabelsForDictionaries[$0]?.text = dictionary.hasWord(word) ? "Yes" : "No"
             } else {
                 resultLabelsForDictionaries[$0]?.text = "–" // en-dash
@@ -137,3 +139,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 }
 
+extension String {
+    var containsEmoji: Bool {
+        for scalar in unicodeScalars {
+            switch scalar.value {
+            case 0x3030, 0x00AE, 0x00A9,// Special Characters
+            0x1D000...0x1F77F,          // Emoticons
+            0x2100...0x27BF,            // Misc symbols and Dingbats
+            0xFE00...0xFE0F,            // Variation Selectors
+            0x1F900...0x1F9FF:          // Supplemental Symbols and Pictographs
+                return true
+            default:
+                continue
+            }
+        }
+        return false
+    }
+}
