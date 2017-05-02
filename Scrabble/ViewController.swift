@@ -25,6 +25,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     var dictionaries: [DictionaryResource:DictionaryLookup] = [:]
     var resultLabelsForDictionaries: [DictionaryResource:UILabel] = [:]
+    let alphaSet = Set("abcdefghijklmnopqrstuvwxyz".characters)
     var word: String? = nil { didSet {
         wordTitle.text = word ?? "No Word"
 
@@ -38,24 +39,24 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
         }
 
-        defineButton.enabled = word != nil
+        defineButton.isEnabled = word != nil
         wordEntry.text = word ?? ""
     } }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let defaultCenter = NSNotificationCenter.defaultCenter()
+        let defaultCenter = NotificationCenter.default
         defaultCenter.addObserver(
             self,
             selector: #selector(keyboardWillShow),
-            name: UIKeyboardWillShowNotification,
+            name: NSNotification.Name.UIKeyboardWillShow,
             object: nil
         )
         defaultCenter.addObserver(
             self,
             selector: #selector(keyboardWillHide),
-            name: UIKeyboardWillHideNotification,
+            name: NSNotification.Name.UIKeyboardWillHide,
             object: nil
         )
 
@@ -76,27 +77,27 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-    func keyboardWillShow(sender: NSNotification) {
-        let info = sender.userInfo!
-        let keyboardSize = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue().height
+    func keyboardWillShow(_ sender: Notification) {
+        let info = (sender as NSNotification).userInfo!
+        let keyboardSize = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.height
         bottomConstraint.constant =
             defaultMargin + keyboardSize - bottomLayoutGuide.length
 
-        let duration: NSTimeInterval = (info[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue
+        let duration: TimeInterval = (info[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue
 
-        UIView.animateWithDuration(duration) { self.view.layoutIfNeeded() }
+        UIView.animate(withDuration: duration, animations: { self.view.layoutIfNeeded() }) 
     }
 
-    func keyboardWillHide(sender: NSNotification) {
-        let info = sender.userInfo!
-        let duration: NSTimeInterval = (info[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue
+    func keyboardWillHide(_ sender: Notification) {
+        let info = (sender as NSNotification).userInfo!
+        let duration: TimeInterval = (info[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue
         bottomConstraint.constant = defaultMargin
 
-        UIView.animateWithDuration(duration) { self.view.layoutIfNeeded() }
+        UIView.animate(withDuration: duration, animations: { self.view.layoutIfNeeded() }) 
     }
 
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        if let word = wordEntry.text where !word.isEmpty {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let word = wordEntry.text , !word.isEmpty {
             self.word = word
         } else {
             self.word = nil
@@ -105,34 +106,32 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return true
     }
 
-    @IBAction func defineDidPress(sender: AnyObject) {
+    @IBAction func defineDidPress(_ sender: AnyObject) {
         guard let word = self.word else { return }
 
-        let definitionPopup =  UIReferenceLibraryViewController.dictionaryHasDefinitionForTerm(word)
-            ? UIReferenceLibraryViewController.init(term: word)
-            : SFSafariViewController(URL: NSURL(string: "https://www.google.co.uk/search?q=define:" + word.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!)!)
+        let definitionPopup = UIReferenceLibraryViewController.dictionaryHasDefinition(forTerm: word)
+            ? UIReferenceLibraryViewController(term: word)
+            : SFSafariViewController(url: URL(string: "https://www.google.co.uk/search?q=define:" + word.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!)
 
-        definitionPopup.modalPresentationStyle = .FullScreen
-        definitionPopup.modalTransitionStyle = .CoverVertical
-        definitionPopup.providesPresentationContextTransitionStyle = true
+//        definitionPopup.modalPresentationStyle = .fullScreen
+//        definitionPopup.modalTransitionStyle = .coverVertical
+//        definitionPopup.providesPresentationContextTransitionStyle = true
 
-        presentViewController(
-            definitionPopup,
-            animated: true,
-            completion: nil
-        )
+        present(definitionPopup, animated: true, completion: nil)
     }
 
-    @IBAction func wordEntryChanged(sender: UITextField) {
-        sender.text = sender.text?.lowercaseString
+    @IBAction func wordEntryChanged(_ sender: UITextField) {
+        var text = sender.text?.lowercased() ?? ""
+        text = String(text.characters.filter { alphaSet.contains($0) })
+        sender.text = text
     }
 
-    @IBAction func clearDidPress(sender: AnyObject) {
+    @IBAction func clearDidPress(_ sender: AnyObject) {
         word = nil
     }
 
-    private func loadDictionary(resource: DictionaryResource) {
-        if let dictionaryPath = NSBundle.mainBundle().pathForResource(resource, ofType: "txt"),
+    fileprivate func loadDictionary(_ resource: DictionaryResource) {
+        if let dictionaryPath = Bundle.main.path(forResource: resource, ofType: "txt"),
             let dictionary = DictionaryLookup(path: dictionaryPath) {
             dictionaries[resource] = dictionary
         }

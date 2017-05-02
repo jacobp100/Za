@@ -12,13 +12,13 @@ class DictionaryLookup {
     var entries: [String]!
 
     init?(path: String) {
-        guard let entries = try? String(contentsOfFile: path).componentsSeparatedByString("\n") else {
+        guard let entries = try? String(contentsOfFile: path).components(separatedBy: "\n") else {
             return nil
         }
         self.entries = entries
     }
 
-    func hasWord(word: String) -> Bool {
+    func hasWord(_ word: String) -> Bool {
         return entries.contains(word)
     }
 }
