@@ -19,8 +19,9 @@ class IAPViewController: UIViewController {
         ScrabbleStore.default.get(product: .noAds) {
             result in
             guard let product = result.retrievedProducts.first else { return }
-            let priceString = product.localizedPrice!
+            guard let priceString = product.localizedPrice else { return }
             self.upgradeButton.setTitle("\(self.upgradeButton.currentTitle ?? "") (\(priceString))", for: .normal)
+            self.setLayout()
         }
 
         setLayout()
