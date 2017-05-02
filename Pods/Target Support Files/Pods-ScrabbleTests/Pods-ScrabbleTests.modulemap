@@ -1,0 +1,6 @@
+framework module Pods_ScrabbleTests {
+  umbrella header "Pods-ScrabbleTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

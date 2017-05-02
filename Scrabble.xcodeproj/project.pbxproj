@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		160E3A221EB905E4000B09B5 /* IAPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160E3A211EB905E4000B09B5 /* IAPViewController.swift */; };
+		168B840A1EB908B200CBF11B /* ScrabbleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168B84091EB908B200CBF11B /* ScrabbleStore.swift */; };
+		23C4237117093FC909FF2257 /* Pods_ScrabbleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DFFAD7FD9D425544EE3C6B /* Pods_ScrabbleUITests.framework */; };
+		33C69255DD92B200E1DB0BD1 /* Pods_Scrabble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A550A347E2F300DC81870D9B /* Pods_Scrabble.framework */; };
+		41F1CE5B147EBC70A843E61A /* Pods_ScrabbleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 019B65490642ACA04D4CBA29 /* Pods_ScrabbleTests.framework */; };
 		4EB126601D9BBB8100016F8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB1265F1D9BBB8100016F8C /* AppDelegate.swift */; };
 		4EB126621D9BBB8100016F8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB126611D9BBB8100016F8C /* ViewController.swift */; };
 		4EB126651D9BBB8100016F8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB126631D9BBB8100016F8C /* Main.storyboard */; };
@@ -37,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		019B65490642ACA04D4CBA29 /* Pods_ScrabbleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrabbleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		160E3A211EB905E4000B09B5 /* IAPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPViewController.swift; sourceTree = "<group>"; };
+		168B84091EB908B200CBF11B /* ScrabbleStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrabbleStore.swift; sourceTree = "<group>"; };
+		16DFFAD7FD9D425544EE3C6B /* Pods_ScrabbleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrabbleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40B6AF28BEDC63EBE4EE8519 /* Pods-Scrabble.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scrabble.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scrabble/Pods-Scrabble.debug.xcconfig"; sourceTree = "<group>"; };
 		4EB1265C1D9BBB8100016F8C /* Scrabble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrabble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB1265F1D9BBB8100016F8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EB126611D9BBB8100016F8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +63,12 @@
 		4EB1268D1D9BD2F100016F8C /* DictionaryLookup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryLookup.swift; sourceTree = "<group>"; };
 		4EB1268F1D9BD40000016F8C /* sowpods.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sowpods.txt; sourceTree = "<group>"; };
 		4EB126901D9BD40000016F8C /* twl06.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = twl06.txt; sourceTree = "<group>"; };
+		722003DE8C78A702245D04C9 /* Pods-ScrabbleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrabbleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrabbleUITests/Pods-ScrabbleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A550A347E2F300DC81870D9B /* Pods_Scrabble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scrabble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5C7956A0D9B4AE3A126072B /* Pods-ScrabbleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrabbleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrabbleTests/Pods-ScrabbleTests.release.xcconfig"; sourceTree = "<group>"; };
+		B8392F43714BD0AF0EA1C154 /* Pods-ScrabbleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrabbleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrabbleUITests/Pods-ScrabbleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D512D54D26404597D574925E /* Pods-Scrabble.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scrabble.release.xcconfig"; path = "Pods/Target Support Files/Pods-Scrabble/Pods-Scrabble.release.xcconfig"; sourceTree = "<group>"; };
+		FD13DA5937E9E6BDE51FE959 /* Pods-ScrabbleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrabbleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrabbleTests/Pods-ScrabbleTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C69255DD92B200E1DB0BD1 /* Pods_Scrabble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41F1CE5B147EBC70A843E61A /* Pods_ScrabbleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23C4237117093FC909FF2257 /* Pods_ScrabbleUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +106,8 @@
 				4EB126731D9BBB8100016F8C /* ScrabbleTests */,
 				4EB1267E1D9BBB8100016F8C /* ScrabbleUITests */,
 				4EB1265D1D9BBB8100016F8C /* Products */,
+				BED19D51093940D6B002B3A9 /* Pods */,
+				D8E2E46B91958577CBA3A28A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,7 +126,9 @@
 			children = (
 				4EB1265F1D9BBB8100016F8C /* AppDelegate.swift */,
 				4EB126611D9BBB8100016F8C /* ViewController.swift */,
+				160E3A211EB905E4000B09B5 /* IAPViewController.swift */,
 				4EB1268D1D9BD2F100016F8C /* DictionaryLookup.swift */,
+				168B84091EB908B200CBF11B /* ScrabbleStore.swift */,
 				4EB126631D9BBB8100016F8C /* Main.storyboard */,
 				4EB126661D9BBB8100016F8C /* Assets.xcassets */,
 				4EB126681D9BBB8100016F8C /* LaunchScreen.storyboard */,
@@ -134,6 +157,29 @@
 			path = ScrabbleUITests;
 			sourceTree = "<group>";
 		};
+		BED19D51093940D6B002B3A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				40B6AF28BEDC63EBE4EE8519 /* Pods-Scrabble.debug.xcconfig */,
+				D512D54D26404597D574925E /* Pods-Scrabble.release.xcconfig */,
+				FD13DA5937E9E6BDE51FE959 /* Pods-ScrabbleTests.debug.xcconfig */,
+				A5C7956A0D9B4AE3A126072B /* Pods-ScrabbleTests.release.xcconfig */,
+				B8392F43714BD0AF0EA1C154 /* Pods-ScrabbleUITests.debug.xcconfig */,
+				722003DE8C78A702245D04C9 /* Pods-ScrabbleUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D8E2E46B91958577CBA3A28A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A550A347E2F300DC81870D9B /* Pods_Scrabble.framework */,
+				019B65490642ACA04D4CBA29 /* Pods_ScrabbleTests.framework */,
+				16DFFAD7FD9D425544EE3C6B /* Pods_ScrabbleUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,9 +187,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EB126841D9BBB8100016F8C /* Build configuration list for PBXNativeTarget "Scrabble" */;
 			buildPhases = (
+				14563C43304C7BFCD183F36D /* [CP] Check Pods Manifest.lock */,
 				4EB126581D9BBB8000016F8C /* Sources */,
 				4EB126591D9BBB8000016F8C /* Frameworks */,
 				4EB1265A1D9BBB8000016F8C /* Resources */,
+				A125E1306F5E1D0B0BCE15F2 /* [CP] Embed Pods Frameworks */,
+				E12F959B5FAB1731B0B59354 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,9 +207,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EB126871D9BBB8100016F8C /* Build configuration list for PBXNativeTarget "ScrabbleTests" */;
 			buildPhases = (
+				004D354775726283770C524A /* [CP] Check Pods Manifest.lock */,
 				4EB1266C1D9BBB8100016F8C /* Sources */,
 				4EB1266D1D9BBB8100016F8C /* Frameworks */,
 				4EB1266E1D9BBB8100016F8C /* Resources */,
+				46E7E5DED551B2ECC81B4504 /* [CP] Embed Pods Frameworks */,
+				04CE214FE8604C7495ACB8E5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,9 +228,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EB1268A1D9BBB8100016F8C /* Build configuration list for PBXNativeTarget "ScrabbleUITests" */;
 			buildPhases = (
+				FF666078D29564A08793167C /* [CP] Check Pods Manifest.lock */,
 				4EB126771D9BBB8100016F8C /* Sources */,
 				4EB126781D9BBB8100016F8C /* Frameworks */,
 				4EB126791D9BBB8100016F8C /* Resources */,
+				F2E79723F3F3303683866097 /* [CP] Embed Pods Frameworks */,
+				122EFC53F46C9CC24F896C1F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -266,14 +321,154 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		004D354775726283770C524A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		04CE214FE8604C7495ACB8E5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrabbleTests/Pods-ScrabbleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		122EFC53F46C9CC24F896C1F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrabbleUITests/Pods-ScrabbleUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		14563C43304C7BFCD183F36D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		46E7E5DED551B2ECC81B4504 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrabbleTests/Pods-ScrabbleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A125E1306F5E1D0B0BCE15F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scrabble/Pods-Scrabble-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E12F959B5FAB1731B0B59354 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scrabble/Pods-Scrabble-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2E79723F3F3303683866097 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrabbleUITests/Pods-ScrabbleUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF666078D29564A08793167C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4EB126581D9BBB8000016F8C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4EB1268E1D9BD2F100016F8C /* DictionaryLookup.swift in Sources */,
+				168B840A1EB908B200CBF11B /* ScrabbleStore.swift in Sources */,
 				4EB126621D9BBB8100016F8C /* ViewController.swift in Sources */,
 				4EB126601D9BBB8100016F8C /* AppDelegate.swift in Sources */,
+				160E3A221EB905E4000B09B5 /* IAPViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +615,7 @@
 		};
 		4EB126851D9BBB8100016F8C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40B6AF28BEDC63EBE4EE8519 /* Pods-Scrabble.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YG77U88R8M;
@@ -433,6 +629,7 @@
 		};
 		4EB126861D9BBB8100016F8C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D512D54D26404597D574925E /* Pods-Scrabble.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YG77U88R8M;
@@ -446,6 +643,7 @@
 		};
 		4EB126881D9BBB8100016F8C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD13DA5937E9E6BDE51FE959 /* Pods-ScrabbleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ScrabbleTests/Info.plist;
@@ -459,6 +657,7 @@
 		};
 		4EB126891D9BBB8100016F8C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5C7956A0D9B4AE3A126072B /* Pods-ScrabbleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ScrabbleTests/Info.plist;
@@ -472,6 +671,7 @@
 		};
 		4EB1268B1D9BBB8100016F8C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8392F43714BD0AF0EA1C154 /* Pods-ScrabbleUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = ScrabbleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -484,6 +684,7 @@
 		};
 		4EB1268C1D9BBB8100016F8C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 722003DE8C78A702245D04C9 /* Pods-ScrabbleUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = ScrabbleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

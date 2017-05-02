@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyStoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        ScrabbleStore.default.loadPurchases()
+
+        SwiftyStoreKit.completeTransactions(atomically: true) {
+            products in
+            products.map {
+                $0.transaction
+                }.filter {
+                    $0.transactionState == .purchased || $0.transactionState == .restored
+                }.forEach {
+                    SwiftyStoreKit.finishTransaction($0)
+            }
+        }
+
         return true
     }
 

@@ -8,13 +8,15 @@
 
 import UIKit
 import SafariServices
+import GoogleMobileAds
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, UIPopoverPresentationControllerDelegate {
 
     typealias DictionaryResource = String
     let SOWPODS: DictionaryResource = "sowpods"
     let TWL06: DictionaryResource = "twl06"
 
+    @IBOutlet var adView: GADBannerView!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var wordTitle: UILabel!
     @IBOutlet weak var sowpodsResult: UILabel!
@@ -29,6 +31,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     var word: String? = nil { didSet {
         wordTitle.text = word ?? "No Word"
 
+        if word == "rmad", adView.superview != nil {
+            adView.removeFromSuperview()
+        }
+
         resultLabelsForDictionaries.keys.forEach {
             if let word = word, let dictionary = dictionaries[$0] {
                 resultLabelsForDictionaries[$0]?.text = dictionary.hasWord(word) ? "Yes" : "No"
@@ -39,6 +45,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
         defineButton.isEnabled = word != nil
         wordEntry.text = word ?? ""
+    } }
+    var noAds = false { didSet {
+        if noAds && adView.superview != nil {
+            adView.removeFromSuperview()
+        }
+
+        if noAds && navigationItem.leftBarButtonItem != nil {
+            presentedViewController?.dismiss(animated: true, completion: nil)
+            navigationItem.leftBarButtonItem = nil
+        }
     } }
 
     override func viewDidLoad() {
@@ -57,6 +73,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
             name: NSNotification.Name.UIKeyboardWillHide,
             object: nil
         )
+        defaultCenter.addObserver(
+            self,
+            selector: #selector(purchasesChanged),
+            name: PurchasesChangedNotification,
+            object: nil
+        )
+
+        noAds = ScrabbleStore.default.hasNoAds
+        if !noAds {
+            adView.adUnitID = "ca-app-pub-3165588222284261/8679041434"
+            adView.rootViewController = self
+            let request = GADRequest()
+            request.testDevices = [kGADSimulatorID]
+            adView.load(request)
+        }
 
         loadDictionary(SOWPODS)
         loadDictionary(TWL06)
@@ -73,6 +104,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        segue.destination.popoverPresentationController?.delegate = self
     }
 
     func keyboardWillShow(_ sender: Notification) {
@@ -111,10 +146,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
             ? UIReferenceLibraryViewController(term: word)
             : SFSafariViewController(url: URL(string: "https://www.google.co.uk/search?q=define:" + word.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!)
 
-//        definitionPopup.modalPresentationStyle = .fullScreen
-//        definitionPopup.modalTransitionStyle = .coverVertical
-//        definitionPopup.providesPresentationContextTransitionStyle = true
-
         present(definitionPopup, animated: true, completion: nil)
     }
 
@@ -133,5 +164,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
             let dictionary = DictionaryLookup(path: dictionaryPath) {
             dictionaries[resource] = dictionary
         }
+    }
+
+    // MARK: IAP
+
+    func purchasesChanged(_ sender: Notification) {
+        noAds = ScrabbleStore.default.hasNoAds
+    }
+
+    // MARK: Popover delegate
+
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
     }
 }
