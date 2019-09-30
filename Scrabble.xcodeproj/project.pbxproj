@@ -7,44 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		160E3A221EB905E4000B09B5 /* IAPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160E3A211EB905E4000B09B5 /* IAPViewController.swift */; };
-		168B840A1EB908B200CBF11B /* ScrabbleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168B84091EB908B200CBF11B /* ScrabbleStore.swift */; };
-		23C4237117093FC909FF2257 /* Pods_ScrabbleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DFFAD7FD9D425544EE3C6B /* Pods_ScrabbleUITests.framework */; };
 		33C69255DD92B200E1DB0BD1 /* Pods_Scrabble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A550A347E2F300DC81870D9B /* Pods_Scrabble.framework */; };
-		41F1CE5B147EBC70A843E61A /* Pods_ScrabbleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 019B65490642ACA04D4CBA29 /* Pods_ScrabbleTests.framework */; };
 		4EB126601D9BBB8100016F8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB1265F1D9BBB8100016F8C /* AppDelegate.swift */; };
 		4EB126621D9BBB8100016F8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB126611D9BBB8100016F8C /* ViewController.swift */; };
 		4EB126651D9BBB8100016F8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB126631D9BBB8100016F8C /* Main.storyboard */; };
 		4EB126671D9BBB8100016F8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EB126661D9BBB8100016F8C /* Assets.xcassets */; };
 		4EB1266A1D9BBB8100016F8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB126681D9BBB8100016F8C /* LaunchScreen.storyboard */; };
-		4EB126751D9BBB8100016F8C /* ScrabbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB126741D9BBB8100016F8C /* ScrabbleTests.swift */; };
-		4EB126801D9BBB8100016F8C /* ScrabbleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB1267F1D9BBB8100016F8C /* ScrabbleUITests.swift */; };
 		4EB1268E1D9BD2F100016F8C /* DictionaryLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB1268D1D9BD2F100016F8C /* DictionaryLookup.swift */; };
 		4EB126911D9BD40000016F8C /* sowpods.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4EB1268F1D9BD40000016F8C /* sowpods.txt */; };
 		4EB126921D9BD40000016F8C /* twl06.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4EB126901D9BD40000016F8C /* twl06.txt */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		4EB126711D9BBB8100016F8C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4EB126541D9BBB8000016F8C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4EB1265B1D9BBB8000016F8C;
-			remoteInfo = Scrabble;
-		};
-		4EB1267C1D9BBB8100016F8C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4EB126541D9BBB8000016F8C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4EB1265B1D9BBB8000016F8C;
-			remoteInfo = Scrabble;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		019B65490642ACA04D4CBA29 /* Pods_ScrabbleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrabbleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		160E3A211EB905E4000B09B5 /* IAPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPViewController.swift; sourceTree = "<group>"; };
-		168B84091EB908B200CBF11B /* ScrabbleStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrabbleStore.swift; sourceTree = "<group>"; };
 		16DFFAD7FD9D425544EE3C6B /* Pods_ScrabbleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrabbleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40B6AF28BEDC63EBE4EE8519 /* Pods-Scrabble.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scrabble.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scrabble/Pods-Scrabble.debug.xcconfig"; sourceTree = "<group>"; };
 		4EB1265C1D9BBB8100016F8C /* Scrabble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrabble.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,12 +29,6 @@
 		4EB126661D9BBB8100016F8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EB126691D9BBB8100016F8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EB1266B1D9BBB8100016F8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4EB126701D9BBB8100016F8C /* ScrabbleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrabbleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4EB126741D9BBB8100016F8C /* ScrabbleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrabbleTests.swift; sourceTree = "<group>"; };
-		4EB126761D9BBB8100016F8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4EB1267B1D9BBB8100016F8C /* ScrabbleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrabbleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4EB1267F1D9BBB8100016F8C /* ScrabbleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrabbleUITests.swift; sourceTree = "<group>"; };
-		4EB126811D9BBB8100016F8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EB1268D1D9BD2F100016F8C /* DictionaryLookup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryLookup.swift; sourceTree = "<group>"; };
 		4EB1268F1D9BD40000016F8C /* sowpods.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sowpods.txt; sourceTree = "<group>"; };
 		4EB126901D9BD40000016F8C /* twl06.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = twl06.txt; sourceTree = "<group>"; };
@@ -80,22 +49,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4EB1266D1D9BBB8100016F8C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				41F1CE5B147EBC70A843E61A /* Pods_ScrabbleTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4EB126781D9BBB8100016F8C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				23C4237117093FC909FF2257 /* Pods_ScrabbleUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -103,8 +56,6 @@
 			isa = PBXGroup;
 			children = (
 				4EB1265E1D9BBB8100016F8C /* Scrabble */,
-				4EB126731D9BBB8100016F8C /* ScrabbleTests */,
-				4EB1267E1D9BBB8100016F8C /* ScrabbleUITests */,
 				4EB1265D1D9BBB8100016F8C /* Products */,
 				BED19D51093940D6B002B3A9 /* Pods */,
 				D8E2E46B91958577CBA3A28A /* Frameworks */,
@@ -115,8 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				4EB1265C1D9BBB8100016F8C /* Scrabble.app */,
-				4EB126701D9BBB8100016F8C /* ScrabbleTests.xctest */,
-				4EB1267B1D9BBB8100016F8C /* ScrabbleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,9 +75,7 @@
 			children = (
 				4EB1265F1D9BBB8100016F8C /* AppDelegate.swift */,
 				4EB126611D9BBB8100016F8C /* ViewController.swift */,
-				160E3A211EB905E4000B09B5 /* IAPViewController.swift */,
 				4EB1268D1D9BD2F100016F8C /* DictionaryLookup.swift */,
-				168B84091EB908B200CBF11B /* ScrabbleStore.swift */,
 				4EB126631D9BBB8100016F8C /* Main.storyboard */,
 				4EB126661D9BBB8100016F8C /* Assets.xcassets */,
 				4EB126681D9BBB8100016F8C /* LaunchScreen.storyboard */,
@@ -137,24 +84,6 @@
 				4EB126901D9BD40000016F8C /* twl06.txt */,
 			);
 			path = Scrabble;
-			sourceTree = "<group>";
-		};
-		4EB126731D9BBB8100016F8C /* ScrabbleTests */ = {
-			isa = PBXGroup;
-			children = (
-				4EB126741D9BBB8100016F8C /* ScrabbleTests.swift */,
-				4EB126761D9BBB8100016F8C /* Info.plist */,
-			);
-			path = ScrabbleTests;
-			sourceTree = "<group>";
-		};
-		4EB1267E1D9BBB8100016F8C /* ScrabbleUITests */ = {
-			isa = PBXGroup;
-			children = (
-				4EB1267F1D9BBB8100016F8C /* ScrabbleUITests.swift */,
-				4EB126811D9BBB8100016F8C /* Info.plist */,
-			);
-			path = ScrabbleUITests;
 			sourceTree = "<group>";
 		};
 		BED19D51093940D6B002B3A9 /* Pods */ = {
@@ -191,8 +120,6 @@
 				4EB126581D9BBB8000016F8C /* Sources */,
 				4EB126591D9BBB8000016F8C /* Frameworks */,
 				4EB1265A1D9BBB8000016F8C /* Resources */,
-				A125E1306F5E1D0B0BCE15F2 /* [CP] Embed Pods Frameworks */,
-				E12F959B5FAB1731B0B59354 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,48 +130,6 @@
 			productReference = 4EB1265C1D9BBB8100016F8C /* Scrabble.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4EB1266F1D9BBB8100016F8C /* ScrabbleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4EB126871D9BBB8100016F8C /* Build configuration list for PBXNativeTarget "ScrabbleTests" */;
-			buildPhases = (
-				004D354775726283770C524A /* [CP] Check Pods Manifest.lock */,
-				4EB1266C1D9BBB8100016F8C /* Sources */,
-				4EB1266D1D9BBB8100016F8C /* Frameworks */,
-				4EB1266E1D9BBB8100016F8C /* Resources */,
-				46E7E5DED551B2ECC81B4504 /* [CP] Embed Pods Frameworks */,
-				04CE214FE8604C7495ACB8E5 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4EB126721D9BBB8100016F8C /* PBXTargetDependency */,
-			);
-			name = ScrabbleTests;
-			productName = ScrabbleTests;
-			productReference = 4EB126701D9BBB8100016F8C /* ScrabbleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		4EB1267A1D9BBB8100016F8C /* ScrabbleUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4EB1268A1D9BBB8100016F8C /* Build configuration list for PBXNativeTarget "ScrabbleUITests" */;
-			buildPhases = (
-				FF666078D29564A08793167C /* [CP] Check Pods Manifest.lock */,
-				4EB126771D9BBB8100016F8C /* Sources */,
-				4EB126781D9BBB8100016F8C /* Frameworks */,
-				4EB126791D9BBB8100016F8C /* Resources */,
-				F2E79723F3F3303683866097 /* [CP] Embed Pods Frameworks */,
-				122EFC53F46C9CC24F896C1F /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4EB1267D1D9BBB8100016F8C /* PBXTargetDependency */,
-			);
-			name = ScrabbleUITests;
-			productName = ScrabbleUITests;
-			productReference = 4EB1267B1D9BBB8100016F8C /* ScrabbleUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -252,7 +137,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Jacob Parker";
 				TargetAttributes = {
 					4EB1265B1D9BBB8000016F8C = {
@@ -260,21 +145,11 @@
 						DevelopmentTeam = YG77U88R8M;
 						LastSwiftMigration = 0800;
 					};
-					4EB1266F1D9BBB8100016F8C = {
-						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0800;
-						TestTargetID = 4EB1265B1D9BBB8000016F8C;
-					};
-					4EB1267A1D9BBB8100016F8C = {
-						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0800;
-						TestTargetID = 4EB1265B1D9BBB8000016F8C;
-					};
 				};
 			};
 			buildConfigurationList = 4EB126571D9BBB8000016F8C /* Build configuration list for PBXProject "Scrabble" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -286,8 +161,6 @@
 			projectRoot = "";
 			targets = (
 				4EB1265B1D9BBB8000016F8C /* Scrabble */,
-				4EB1266F1D9BBB8100016F8C /* ScrabbleTests */,
-				4EB1267A1D9BBB8100016F8C /* ScrabbleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -305,156 +178,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4EB1266E1D9BBB8100016F8C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4EB126791D9BBB8100016F8C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		004D354775726283770C524A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		04CE214FE8604C7495ACB8E5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrabbleTests/Pods-ScrabbleTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		122EFC53F46C9CC24F896C1F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrabbleUITests/Pods-ScrabbleUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		14563C43304C7BFCD183F36D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Scrabble-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		46E7E5DED551B2ECC81B4504 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrabbleTests/Pods-ScrabbleTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A125E1306F5E1D0B0BCE15F2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scrabble/Pods-Scrabble-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E12F959B5FAB1731B0B59354 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Scrabble/Pods-Scrabble-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F2E79723F3F3303683866097 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrabbleUITests/Pods-ScrabbleUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FF666078D29564A08793167C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -465,43 +207,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EB1268E1D9BD2F100016F8C /* DictionaryLookup.swift in Sources */,
-				168B840A1EB908B200CBF11B /* ScrabbleStore.swift in Sources */,
 				4EB126621D9BBB8100016F8C /* ViewController.swift in Sources */,
 				4EB126601D9BBB8100016F8C /* AppDelegate.swift in Sources */,
-				160E3A221EB905E4000B09B5 /* IAPViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4EB1266C1D9BBB8100016F8C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4EB126751D9BBB8100016F8C /* ScrabbleTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4EB126771D9BBB8100016F8C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4EB126801D9BBB8100016F8C /* ScrabbleUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4EB126721D9BBB8100016F8C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4EB1265B1D9BBB8000016F8C /* Scrabble */;
-			targetProxy = 4EB126711D9BBB8100016F8C /* PBXContainerItemProxy */;
-		};
-		4EB1267D1D9BBB8100016F8C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4EB1265B1D9BBB8000016F8C /* Scrabble */;
-			targetProxy = 4EB1267C1D9BBB8100016F8C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4EB126631D9BBB8100016F8C /* Main.storyboard */ = {
@@ -527,19 +238,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -575,19 +295,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -621,9 +350,10 @@
 				DEVELOPMENT_TEAM = YG77U88R8M;
 				INFOPLIST_FILE = Scrabble/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = jacob.Za;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -635,63 +365,10 @@
 				DEVELOPMENT_TEAM = YG77U88R8M;
 				INFOPLIST_FILE = Scrabble/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = jacob.Za;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		4EB126881D9BBB8100016F8C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD13DA5937E9E6BDE51FE959 /* Pods-ScrabbleTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = ScrabbleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = autotrip.ScrabbleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Scrabble.app/Scrabble";
-			};
-			name = Debug;
-		};
-		4EB126891D9BBB8100016F8C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5C7956A0D9B4AE3A126072B /* Pods-ScrabbleTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = ScrabbleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = autotrip.ScrabbleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Scrabble.app/Scrabble";
-			};
-			name = Release;
-		};
-		4EB1268B1D9BBB8100016F8C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8392F43714BD0AF0EA1C154 /* Pods-ScrabbleUITests.debug.xcconfig */;
-			buildSettings = {
-				INFOPLIST_FILE = ScrabbleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = autotrip.ScrabbleUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = Scrabble;
-			};
-			name = Debug;
-		};
-		4EB1268C1D9BBB8100016F8C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 722003DE8C78A702245D04C9 /* Pods-ScrabbleUITests.release.xcconfig */;
-			buildSettings = {
-				INFOPLIST_FILE = ScrabbleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = autotrip.ScrabbleUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = Scrabble;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -712,24 +389,6 @@
 			buildConfigurations = (
 				4EB126851D9BBB8100016F8C /* Debug */,
 				4EB126861D9BBB8100016F8C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4EB126871D9BBB8100016F8C /* Build configuration list for PBXNativeTarget "ScrabbleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4EB126881D9BBB8100016F8C /* Debug */,
-				4EB126891D9BBB8100016F8C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4EB1268A1D9BBB8100016F8C /* Build configuration list for PBXNativeTarget "ScrabbleUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4EB1268B1D9BBB8100016F8C /* Debug */,
-				4EB1268C1D9BBB8100016F8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -8,15 +8,13 @@
 
 import UIKit
 import SafariServices
-import GoogleMobileAds
 
-class ViewController: UIViewController, UITextFieldDelegate, UIPopoverPresentationControllerDelegate {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     typealias DictionaryResource = String
     let SOWPODS: DictionaryResource = "sowpods"
     let TWL06: DictionaryResource = "twl06"
 
-    @IBOutlet var adView: GADBannerView!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var wordTitle: UILabel!
     @IBOutlet weak var sowpodsResult: UILabel!
@@ -27,13 +25,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPopoverPresentati
 
     var dictionaries: [DictionaryResource:DictionaryLookup] = [:]
     var resultLabelsForDictionaries: [DictionaryResource:UILabel] = [:]
-    let alphaSet = Set("abcdefghijklmnopqrstuvwxyz".characters)
+    let alphaSet = Set("abcdefghijklmnopqrstuvwxyz")
     var word: String? = nil { didSet {
         wordTitle.text = word ?? "No Word"
-
-        if word == "rmad", adView.superview != nil {
-            adView.removeFromSuperview()
-        }
 
         resultLabelsForDictionaries.keys.forEach {
             if let word = word, let dictionary = dictionaries[$0] {
@@ -46,16 +40,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPopoverPresentati
         defineButton.isEnabled = word != nil
         wordEntry.text = word ?? ""
     } }
-    var noAds = false { didSet {
-        if noAds && adView.superview != nil {
-            adView.removeFromSuperview()
-        }
-
-        if noAds && navigationItem.leftBarButtonItem != nil {
-            presentedViewController?.dismiss(animated: true, completion: nil)
-            navigationItem.leftBarButtonItem = nil
-        }
-    } }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,30 +48,15 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPopoverPresentati
         defaultCenter.addObserver(
             self,
             selector: #selector(keyboardWillShow),
-            name: NSNotification.Name.UIKeyboardWillShow,
+            name: UIResponder.keyboardWillShowNotification,
             object: nil
         )
         defaultCenter.addObserver(
             self,
             selector: #selector(keyboardWillHide),
-            name: NSNotification.Name.UIKeyboardWillHide,
+            name: UIResponder.keyboardWillHideNotification,
             object: nil
         )
-        defaultCenter.addObserver(
-            self,
-            selector: #selector(purchasesChanged),
-            name: PurchasesChangedNotification,
-            object: nil
-        )
-
-        noAds = ScrabbleStore.default.hasNoAds
-        if !noAds {
-            adView.adUnitID = "ca-app-pub-3165588222284261/8679041434"
-            adView.rootViewController = self
-            let request = GADRequest()
-            request.testDevices = [kGADSimulatorID]
-            adView.load(request)
-        }
 
         loadDictionary(SOWPODS)
         loadDictionary(TWL06)
@@ -106,24 +75,20 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPopoverPresentati
         // Dispose of any resources that can be recreated.
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        segue.destination.popoverPresentationController?.delegate = self
-    }
-
-    func keyboardWillShow(_ sender: Notification) {
+    @objc func keyboardWillShow(_ sender: Notification) {
         let info = (sender as NSNotification).userInfo!
-        let keyboardSize = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.height
+        let keyboardSize = (info[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.height
         bottomConstraint.constant =
             defaultMargin + keyboardSize - bottomLayoutGuide.length
 
-        let duration: TimeInterval = (info[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue
+        let duration: TimeInterval = (info[UIResponder.keyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue
 
         UIView.animate(withDuration: duration, animations: { self.view.layoutIfNeeded() }) 
     }
 
-    func keyboardWillHide(_ sender: Notification) {
+    @objc func keyboardWillHide(_ sender: Notification) {
         let info = (sender as NSNotification).userInfo!
-        let duration: TimeInterval = (info[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue
+        let duration: TimeInterval = (info[UIResponder.keyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue
         bottomConstraint.constant = defaultMargin
 
         UIView.animate(withDuration: duration, animations: { self.view.layoutIfNeeded() }) 
@@ -151,7 +116,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPopoverPresentati
 
     @IBAction func wordEntryChanged(_ sender: UITextField) {
         var text = sender.text?.lowercased() ?? ""
-        text = String(text.characters.filter { alphaSet.contains($0) })
+        text = String(text.filter { alphaSet.contains($0) })
         sender.text = text
     }
 
@@ -166,15 +131,4 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPopoverPresentati
         }
     }
 
-    // MARK: IAP
-
-    func purchasesChanged(_ sender: Notification) {
-        noAds = ScrabbleStore.default.hasNoAds
-    }
-
-    // MARK: Popover delegate
-
-    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-        return .none
-    }
 }
